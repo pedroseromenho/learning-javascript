@@ -1,4 +1,4 @@
-# **Exercice 2** - écriture d'une fonction renvoyant une valeur
+# **Ex02** - écriture d'une fonction renvoyant une valeur
 
 Créer une fonction qui :
 - demande la saisie d'un rayon;
