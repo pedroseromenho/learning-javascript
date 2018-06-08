@@ -1,4 +1,4 @@
-# **Exercice 5** - manipulation des opérateurs
+# **Ex05** - manipulation des opérateurs
 
 b est toujours initialisée à 2
 Quel est le résultat des opérations suivantes ?
