@@ -18,7 +18,7 @@ Au terme de ce parcours, être prêt à prendre en main des frameworks JS (React
 - [Solo Learn - Javascript](https://www.sololearn.com/Course/JavaScript/) :uk:
 - [Sabe - Javascript](https://sabe.io/classes/javascript) :uk:
 - [Guide Javascript de Mozilla](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Apropos) :uk: :fr:
-- et comme toujours [w3schools](https://www.w3schools.com/js/default.asp) et ses [Try it!]
-- [jsfiddle](https://jsfiddle.net/) - pour tester vos codes js
+- [w3schools](https://www.w3schools.com/js/default.asp) et ses [Try it!]
+- [jsfiddle](https://jsfiddle.net/) - pour tester les codes js
 - [learn x in y minutes](https://learnxinyminutes.com/docs/javascript/)
 - [learn js](http://www.learn-js.org/)
