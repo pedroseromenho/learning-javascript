@@ -9,7 +9,7 @@ Au terme de ce parcours, être capable de :
 - Modifier le contenu html en utilisant le DOM (Document Object Model)
 - Créer des requêtes en Ajax
 - Debugger en utilisant la console du navigateur
-- utiliser des librairies externes (ex: jQuery ou Zepto)
+- Utiliser des librairies externes (ex: jQuery ou Zepto)
 
 Au terme de ce parcours, être prêt à prendre en main des frameworks JS (React, Angular, Vue.js...)
 
