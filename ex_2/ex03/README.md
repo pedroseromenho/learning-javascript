@@ -1,4 +1,4 @@
-# **Exercice 3** - écriture d'une fonction avec arguments
+# **Ex03** - écriture d'une fonction avec arguments
 
 1. Créez deux variables globales `a` et `b`, initialisées respectivement à 3 et à 2.
 2. Créez une fonction `triple` prenant un argument x et renvoyant le résultat de la multiplication de x par 3
