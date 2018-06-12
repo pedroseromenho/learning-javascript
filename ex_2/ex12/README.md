@@ -1,4 +1,4 @@
-# **Ex_12** - Conversion de température Celsius, Fahrenheit et Kelvin
+# **Ex12** - Conversion de température Celsius, Fahrenheit et Kelvin
 [Voir résultat](https://pedroseromenho.github.io/learning-javascript/ex_2/ex12/)
 
 Créer un bouton. Au click de ce bouton, on lance la fonction `conversionTemperature`.
