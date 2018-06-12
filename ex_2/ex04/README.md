@@ -1,4 +1,5 @@
 # **Ex04** - utilisation d'un tableau
+[Voir résultat](https://pedroseromenho.github.io/learning-javascript/ex_2/ex04/)
 
 1. Créez un tableau nommé `tab` dont le premier élément est -2, le deuxième 1 et le troisième 4
 2. Créez une fonction `additionne` prenant un argument x et renvoyant le résultat de l'addition de x à 2
