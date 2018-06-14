@@ -1,4 +1,5 @@
 # **Ex01** - écriture d'une fonction
+[Voir résultat](https://pedroseromenho.github.io/learning-javascript/ex_2/ex01/)
 
 Créer un bouton "Calculer la surface d'un rectangle". Faites en sorte que lorsqu'on clique sur le bouton, la fonction `surfaceRectagle()` se lance. Cette fonction va demander la saisie d'une largeur, d'une longueur et afficher la surface du rectangle correspondant.
 

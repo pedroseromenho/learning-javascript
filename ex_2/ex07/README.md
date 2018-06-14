@@ -1,4 +1,5 @@
 # **Ex07** - utilisation de switch
+[Voir résultat](https://pedroseromenho.github.io/learning-javascript/ex_2/ex07/)
 
 Créer un bouton. Au click de ce bouton, lancer la fonction `faireChoix()`.
 

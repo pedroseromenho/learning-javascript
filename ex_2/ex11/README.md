@@ -1,4 +1,5 @@
-# **Ex_11** - utilisation des boucles et tests
+# **Ex11** - utilisation des boucles et tests
+[Voir résultat](https://pedroseromenho.github.io/learning-javascript/ex_2/ex11/)
 
 Créer un bouton. Au click de ce bouton, lancer la fonction `calculMoyenne`.
 
