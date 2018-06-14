@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 3</title>
+</head>
+<body>
+  <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" onkeypress="return myFunction(event)" />
+  </form>
+  <script>
+    function myFunction(e){
+      if(e.keyCode == 13){
+        x = document.getElementById("nom");
+        alert(x.value);
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
