@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse"/>
+    <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
+    <button type="button" name="button" onclick="check()">Vérification</button>
+  </form>
+  <script>
+    function check(){
+      var x = document.getElementById("motdepasse");
+      var z = document.getElementById("confirmation");
+      if(x.value == z.value){
+        x.style.border = "1px solid green";
+        z.style.border = "1px solid green";
+      }else{
+        x.style.border = "1px solid red";
+        z.style.border = "1px solid red";
+      }
+    }
+    // function check(){
+    //   if(document.getElementById('motdepasse').value == document.getElementById('confirmation').value){
+    //     document.getElementById('motdepasse').style.border = "1px solid green";
+    //     document.getElementById('confirmation').style.border = "1px solid green";
+    //   }else{
+    //     document.getElementById('motdepasse').style.border = "1px solid red";
+    //     document.getElementById('confirmation').style.border = "1px solid red";
+    //   }
+    // }
+  </script>
+</body>
+</html>
