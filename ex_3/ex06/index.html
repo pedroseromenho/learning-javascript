@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 5</title>
+  </head>
+  <body>
+    <div class="conteneur">
+      <img src="images/image1.jpg" id="image1"  onmouseover="mouseOverImage(1)" onmouseout="mouseOutImage(1)"/>
+      <img src="images/image2.jpg" id="image2"  onmouseover="mouseOverImage(2)" onmouseout="mouseOutImage(2)"/>
+      <img src="images/image3.jpg" id="image3"  onmouseover="mouseOverImage(3)" onmouseout="mouseOutImage(3)"/>
+      <img src="images/image4.jpg" id="image4"  onmouseover="mouseOverImage(4)" onmouseout="mouseOutImage(4)"/>
+      <img src="images/image5.jpg" id="image5"  onmouseover="mouseOverImage(5)" onmouseout="mouseOutImage(5)"/>
+    </div>
+    <script>
+     function mouseOverImage(e) {
+     switch (e) {
+       case 1: document.getElementById("image1").src = "images/image1_2.jpg"
+       break;
+       case 2: document.getElementById("image2").src = "images/image2_2.jpg";
+       break;
+       case 3: document.getElementById("image3").src = "images/image3_2.jpg";
+       break;
+       case 4: document.getElementById("image4").src = "images/image4_2.jpg";
+       break;
+       case 5: document.getElementById("image5").src = "images/image5_2.jpg";
+       break;
+     }
+     }
+     function mouseOutImage(f) {
+     switch (f) {
+       case 1: document.getElementById("image1").src = "images/image1.jpg"
+       break;
+       case 2: document.getElementById("image2").src = "images/image2.jpg";
+       break;
+       case 3: document.getElementById("image3").src = "images/image3.jpg";
+       break;
+       case 4: document.getElementById("image4").src = "images/image4.jpg";
+       break;
+       case 5: document.getElementById("image5").src = "images/image5.jpg";
+       break;
+     }
+     }  
+    </script>
+  </body>
+</html>
