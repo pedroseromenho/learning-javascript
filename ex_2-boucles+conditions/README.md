@@ -1,4 +1,4 @@
-# Deuxième série d'exercices...
+# Boucles et Conditions
 
 ## Ressources
 - [Le guide Javascript sur le site de Mozilla](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Introduction)
