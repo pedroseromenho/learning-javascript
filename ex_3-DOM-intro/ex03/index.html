@@ -6,14 +6,13 @@
 </head>
 <body>
   <form>
-    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" onkeypress="return myFunction(event)" />
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" onkeypress="myFunction(event)" />
   </form>
   <script>
     function myFunction(e){
       if(e.keyCode == 13){
         x = document.getElementById("nom");
         alert(x.value);
-        return false;
       }
     }
   </script>
