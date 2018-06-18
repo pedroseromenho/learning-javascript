@@ -1,4 +1,4 @@
-# Initiation au Javascript
+# Introduction au Javascript
 
 ## Exercice 1 :
 

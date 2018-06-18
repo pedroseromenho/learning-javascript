@@ -1,4 +1,4 @@
-# Exercices JavaScript - Partie 3
+# DOM *Introduction*
 
 **IMPORTANT**
 Toutes les ressources aux exercices seront fournies quand cela sera nécessaire.  
