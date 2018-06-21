@@ -1,6 +1,6 @@
 # Canvas
 
-Dessiner:
+**Dessiner:**
 - Un drapeau
 - Un bateau
 - Une maison
