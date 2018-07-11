@@ -153,31 +153,48 @@ let table = [];
 let startDate = 2000;
 for (var i=2; i<trs.length; i++){
   for (var j=2; j<trs[i].children.length; j++){
+    if(j==4){
     table.push({'pays': trs[i].children[1].innerText, 'value':trs[i].children[j].innerText, 'date':j+startDate});
+    }
   }
 }
 console.log(table);
 
 
 
-var svg = dimple.newSvg("#chartContainer", 800, 600);
-var data = table;
-var chart = new dimple.chart(svg, data);
-chart.addCategoryAxis("x", "date");
-chart.addMeasureAxis("y", "value");
-chart.addSeries(null, dimple.plot.bar);
-chart.draw();
+
+// // Graphic (Value + Pays)
+
+    // var svg = dimple.newSvg("#chartContainer", "100%", 650);
+    // data = table;
+    // var myChart = new dimple.chart(svg, data);
+    // myChart.setBounds(75, 30, "100%", 600)
+    // myChart.addMeasureAxis("x", "value");
+    // var y = myChart.addCategoryAxis("y", "pays");
+    // // y.addOrderRule("Date");
+    // myChart.addSeries(null, dimple.plot.bar);
+    // myChart.draw();
 
 
-//   var svg = dimple.newSvg("#chartContainer", 590, 400);
-//   d3.buffer(table){
-//   data = dimple.filterData(data, "date", ["pays"])
-//   var myChart = new dimple.chart(svg, data);
-//   myChart.setBounds(60, 30, 505, 305);
-//   var x = myChart.addCategoryAxis("x", "date");
-//   x.addOrderRule("Date");
-//   myChart.addMeasureAxis("y", "value");
-//   myChart.addSeries("pays", dimple.plot.line);
-//   myChart.addLegend(60, 10, 500, 20, "right");
-//   myChart.draw();
-// });
+// // Graphic (Date + Value + Pays)
+
+//       var svg = dimple.newSvg("#chartContainer", "90%", 1000);
+//       data = dimple.filterData(table, "pays", ["Belgique", "Bulgarie", "Rép.tchèque", "Danemark", "Allemagne", "Estonie(¹)", "Grèce(²)", "Espagne(³)", "Croatie", "Italie(⁴)", "Chypre", "Lettonie(⁵)", "Lituanie", "Luxembourg", "Hongrie", "Malte", "Pays­Bas(⁶)", "Autriche", "Pologne", "Portugal", "Pologne", "Roumanie", "Slovénie", "Slovaquie", "Finlande(⁷)", "Suède", "Islande(⁸)", "Liechtenstein", "Norvège", "Suisse(⁷)", "Monténégro", "ARYdeMacédoine", "Serbie", "Turquie(⁹)"])
+//       var myChart = new dimple.chart(svg, data);
+//       myChart.setBounds(60, 30, "90%", 900);
+//       var x = myChart.addCategoryAxis("x", "date");
+//       // x.addOrderRule("Date");
+//       myChart.addMeasureAxis("y", "value");
+//       myChart.addSeries("pays", dimple.plot.line);
+//       myChart.addLegend(60, 10, 500, 200, "right");
+//       myChart.draw();
+
+
+  var svg = dimple.newSvg("#chartContainer", "100%", 500);
+  data = table;
+  var myChart = new dimple.chart(svg, data);
+  myChart.setBounds(200, 70, "50%", 360)
+  myChart.addMeasureAxis("p", "value");
+  myChart.addSeries("pays", dimple.plot.pie);
+  myChart.addLegend(20, 20, 100, 600, "right");
+  myChart.draw();
