@@ -145,56 +145,129 @@
 // console.log(tbl)
 
 
+// Tableau 1 Recover
 
+// var t = document.getElementById("table1"); // table
+// var trs = t.getElementsByTagName("tr"); //row
+// let table = [];
+// let startDate = 2000;
+
+
+// for (var i=2; i<trs.length; i++){
+//   for (var j=2; j<trs[i].children.length; j++){
+//     if(j==2 && !isNaN(parseInt(trs[i].children[j].innerText))){
+//     table.push({'Pays': trs[i].children[1].innerText, 'Infractions':parseInt(trs[i].children[j].innerText), 'Année':j+startDate});
+//     }
+//   }
+// }
+// console.log(table);
+
+
+// Tableau 1
 
 var t = document.getElementById("table1"); // table
 var trs = t.getElementsByTagName("tr"); //row
+var ths = t.getElementsByTagName("th"); // th
 let table = [];
 let startDate = 2000;
+
+function button(x){
 for (var i=2; i<trs.length; i++){
   for (var j=2; j<trs[i].children.length; j++){
-    if(j==4){
-    table.push({'pays': trs[i].children[1].innerText, 'value':trs[i].children[j].innerText, 'date':j+startDate});
+    if(j==x && !isNaN(parseInt(trs[i].children[j].innerText))){
+    table.push({'Pays': trs[i].children[1].innerText, 'Infractions':parseInt(trs[i].children[j].innerText), 'Année':j+startDate});
     }
   }
 }
-console.log(table);
+}
+console.log(ths);
 
 
 
 
-// // Graphic (Value + Pays)
+
+// // Bouttons Dates
+
+// var button = document.createElement("button");
+// button.innerHTML = "Do Something";
+// t.appendChild(button);
+// button.addEventListener ("click", function() {
+//   alert("did something");
+// });
+
+
+// Graphic 1
+
+  var svg = dimple.newSvg("#chartContainer", "100%", 600);
+  data = table;
+  var myChart = new dimple.chart(svg, data);
+  myChart.setBounds(200, 0, "60%", 620)
+  myChart.addMeasureAxis("p", "Infractions");
+  myChart.addSeries("Pays", dimple.plot.pie);
+  var myLegend = myChart.addLegend(20, 80, 100, 800, "right");
+  myChart.draw();
+  
+  // Légendes Interactives
+  myChart.legends = [];
+  svg.selectAll("title_text")
+          .data(["Cliquez sur la légende","pour cacher ou afficher", "les différents pays:"])
+          .enter()
+          .append("text")
+            .attr("x", 0)
+            .attr("y", function (d, i) { return 41 + i * 14; })
+            .style("font-family", "sans-serif")
+            .style("font-size", "10px")
+            .style("color", "Black")
+            .text(function (d) { return d; });
+
+  var filterValues = dimple.getUniqueValues(table, "Pays");
+  myLegend.shapes.selectAll("rect")
+      .on("click", function (e) {
+        var hide = false;
+        var newFilters = [];
+        filterValues.forEach(function (f) {
+          if (f === e.aggField.slice(-1)[0]) {
+            hide = true;
+          } else {
+            newFilters.push(f);
+          }
+        });
+        if (hide) {
+          d3.select(this).style("opacity", 0.1);
+        } else {
+          newFilters.push(e.aggField.slice(-1)[0]);
+          d3.select(this).style("opacity", 0.8);
+        }
+        filterValues = newFilters;
+        myChart.data = dimple.filterData(table, "Pays", filterValues);
+
+        myChart.draw(800);
+      });
+
+
+// // Graphic (Infractions + Pays)
 
     // var svg = dimple.newSvg("#chartContainer", "100%", 650);
     // data = table;
     // var myChart = new dimple.chart(svg, data);
     // myChart.setBounds(75, 30, "100%", 600)
-    // myChart.addMeasureAxis("x", "value");
-    // var y = myChart.addCategoryAxis("y", "pays");
+    // myChart.addMeasureAxis("x", "Infractions");
+    // var y = myChart.addCategoryAxis("y", "Pays");
     // // y.addOrderRule("Date");
     // myChart.addSeries(null, dimple.plot.bar);
     // myChart.draw();
 
 
-// // Graphic (Date + Value + Pays)
+// // Graphic (Date + Infractions + Pays)
 
 //       var svg = dimple.newSvg("#chartContainer", "90%", 1000);
-//       data = dimple.filterData(table, "pays", ["Belgique", "Bulgarie", "Rép.tchèque", "Danemark", "Allemagne", "Estonie(¹)", "Grèce(²)", "Espagne(³)", "Croatie", "Italie(⁴)", "Chypre", "Lettonie(⁵)", "Lituanie", "Luxembourg", "Hongrie", "Malte", "Pays­Bas(⁶)", "Autriche", "Pologne", "Portugal", "Pologne", "Roumanie", "Slovénie", "Slovaquie", "Finlande(⁷)", "Suède", "Islande(⁸)", "Liechtenstein", "Norvège", "Suisse(⁷)", "Monténégro", "ARYdeMacédoine", "Serbie", "Turquie(⁹)"])
+//       data = dimple.filterData(table, "Pays", ["Belgique", "Bulgarie", "Rép.tchèque", "Danemark", "Allemagne", "Estonie(¹)", "Grèce(²)", "Espagne(³)", "Croatie", "Italie(⁴)", "Chypre", "Lettonie(⁵)", "Lituanie", "Luxembourg", "Hongrie", "Malte", "Pays­Bas(⁶)", "Autriche", "Pologne", "Portugal", "Pologne", "Roumanie", "Slovénie", "Slovaquie", "Finlande(⁷)", "Suède", "Islande(⁸)", "Liechtenstein", "Norvège", "Suisse(⁷)", "Monténégro", "ARYdeMacédoine", "Serbie", "Turquie(⁹)"])
 //       var myChart = new dimple.chart(svg, data);
 //       myChart.setBounds(60, 30, "90%", 900);
-//       var x = myChart.addCategoryAxis("x", "date");
+//       var x = myChart.addCategoryAxis("x", "Année");
 //       // x.addOrderRule("Date");
-//       myChart.addMeasureAxis("y", "value");
-//       myChart.addSeries("pays", dimple.plot.line);
+//       myChart.addMeasureAxis("y", "Infractions");
+//       myChart.addSeries("Pays", dimple.plot.line);
 //       myChart.addLegend(60, 10, 500, 200, "right");
 //       myChart.draw();
 
-
-  var svg = dimple.newSvg("#chartContainer", "100%", 500);
-  data = table;
-  var myChart = new dimple.chart(svg, data);
-  myChart.setBounds(200, 70, "50%", 360)
-  myChart.addMeasureAxis("p", "value");
-  myChart.addSeries("pays", dimple.plot.pie);
-  myChart.addLegend(20, 20, 100, 600, "right");
-  myChart.draw();

@@ -2015,7 +2015,7 @@ function extend(parent, definition) {
 
 function Color() {}
 
-var darker = 0.7;
+var darker = 0;
 var brighter = 1 / darker;
 
 var reI = "\\s*([+-]?\\d+)\\s*",
