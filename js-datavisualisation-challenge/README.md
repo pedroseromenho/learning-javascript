@@ -56,4 +56,9 @@ Utiliser la librairie Dimple.js / D3.js pour y parvenir.
 
 ## Notes Personnelles
 
+C'est avec beaucoup de deception que je n'ai pas pu réaliser la requête ajax pour faute de temps.
+J'ai passé beaucoup de temps à réaliser le graphique interactif ci-dessous, en plus raté car les boutons des dates ne renvoient pas aux bonnes informations. J'ai mis par defaut un autre graphique pour le premier grand tableau (beaucoup moins lisible).
+
 ![Fail](failed.png)
+
+Affaire à suivre…
