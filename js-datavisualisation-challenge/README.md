@@ -4,6 +4,8 @@ Mode : `solo`
 Temps imparti : `5 jours`   
 Date:  16/07 — 20/07/2018
 
+Site: [https://pedroseromenho.github.io/learning-javascript/js-datavisualisation-challenge/index.html](HERE)
+
 **Client Fictif**: Institution Européenne
 
 **Objectif**: Illustrer un article en ajourant des graphiques interactifs grâce au `javascript`. L’utilisateur peut manipuler le graphique en filtrant les donnés, oui révéler des détails au survol de la souris.
@@ -51,3 +53,7 @@ Utiliser la librairie Dimple.js / D3.js pour y parvenir.
 - Construire une fonction callback traitant les donnée remote (via ajax);
 - Le graphique real-time se rafraichit en temps réel;
 - Afficher les données détaillées au survol de la souris, par exemple.
+
+## Notes Personnelles
+
+- !Fail(failed.png)
