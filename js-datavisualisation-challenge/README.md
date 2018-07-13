@@ -56,4 +56,4 @@ Utiliser la librairie Dimple.js / D3.js pour y parvenir.
 
 ## Notes Personnelles
 
-- !Fail(failed.png)
+![Fail](failed.png)
