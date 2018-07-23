@@ -4,7 +4,7 @@ Mode : `solo`
 Temps imparti : `5 jours`   
 Date:  16/07 — 20/07/2018
 
-Site: [https://pedroseromenho.github.io/learning-javascript/js-datavisualisation-challenge/index.html](HERE)
+Site: [HERE](https://pedroseromenho.github.io/learning-javascript/js-datavisualisation-challenge/index.html)
 
 **Client Fictif**: Institution Européenne
 
