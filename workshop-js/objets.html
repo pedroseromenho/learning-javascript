@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Human = {
+            type: "table",
+            color: "brown",
+            bruit: "boum",
+            init(name, color, age) {
+                this.name = name;
+                this.color = color;
+                this.age = age;
+            },
+            tape: function () {
+                console.dir(this.name + " fait " + this.bruit);
+            }
+        };
+
+        let mario = Object.create(Human);
+        mario.embrassePeach = function () {
+            console.log("Smack");
+        }
+
+        mario.init("mario", "rouge", 15);
+        mario.tape();
+
+        let luigi = Object.create(Human);
+
+        luigi.init("luigi", "vert", 5);
+        luigi.tape();
+
+        console.log(mario, luigi)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Variables
+        var variable_var, x, y, z, i;
+
+        variable_var = "Hello world";
+        for (i = 0; i < variable_var.length; i++) {
+            const element = variable_var[i];
+            // console.log(element)
+        }
+    </script>
+
+    <script>
+        //Functions
+        addition();
+        //soustraction();
+
+        //Mauvaise pratique
+        function addition() {
+            console.log("addition")
+        }
+
+
+        //Bonne pratique: il faut stocker les functions dans les variables
+        let soustraction = function () {
+            console.log("soustraction");
+        }
+        console.log(addition);
+        console.log(soustraction);
+
+    </script>
+
+    <script>
+        // This
+
+        var variable_liliane = "Bonjour";
+        let bonjour = function () {
+            this.variable_coco = "coco";
+            var variable_pedro = "Bomdia";
+
+            console.log(variable_liliane);
+            console.log(this.variable_liliane);
+            console.log(variable_pedro);
+            console.log(this.variable_pedro);
+            console.log(this.variable_coco);
+
+        }
+
+        bonjour();
+
+    </script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

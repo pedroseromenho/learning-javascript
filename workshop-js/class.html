@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Voiture {
+            constructor(name, type, gears, options) { // Function qui va s'éxecuter dés la création de l'objet
+                this.name = name;
+                this.type = type;
+                this.gears = gears;
+                this.options = options;
+            }
+
+            roule() {
+                console.log(`${this.name} démarre, Vrouuummm !`)
+            }
+
+            get kind() {
+                return {
+                    type: this.type + "yolo",
+                    country: "BE"
+
+                }
+            }
+
+            set kind(value) {
+                this.type = parseInt(value);
+            }
+
+        }
+
+        let volvo = new Voiture("volvo", "break", 6, [
+            "toît ouvrant", "vitre electrique", "air conditionné"
+        ]); // Instancie
+
+        volvo.kind = "portuguese";
+
+        console.log(volvo.kind);
+
+        volvo.roule();
+
+    </script>
+</body>
+
+</html>

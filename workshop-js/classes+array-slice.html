@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- CLASSES JS -->
+    <script>
+        // Par convention utiliser majuscule pour les classes
+        function Human(name, color, age) {
+            let self = this;
+            let _private = "secret"; // Par convention utiliser _ pour les variables à porté locale.
+
+            // propriétés
+            this.name = name;
+            this.color = color;
+            this.age = age;
+        }
+
+        // Méthode (utiliser prototype pour rajouter la function dans la classe Human)
+        Human.prototype.sayHello = function () {
+            console.log("Hello " + self.name); // moyen pour ne pas se perdre: this = self
+            console.log("Hello " + this.name); // ça marche aussi…
+        }
+
+        // On appelle la classe Humain avec "call", et "this" fait référénce aux propriètes propres à Vampire
+        function Vampire(name, color, age) {
+            Human.call(this, name, color, age);
+            this.power = "bite";
+        }
+
+        // Instance de la classe humain avec "Objet.create", propotype = nouveau prototype.
+        Vampire.prototype = Object.create(Human.prototype);
+
+        // Nouvelle instance
+        let mario = new Human("Mario", "rouge", 30);
+        let luigi = new Human("Luigi", "vert", 25);
+        let wario = new Vampire("Wario", "jaune", 40);
+
+        console.log(mario, luigi);
+        console.log(mario.name);
+        console.log(wario);
+
+        mario.sayHello();
+        wario.sayHello();
+
+    </script>
+
+    <!-- CONSOLE.DIR -->
+    <script>
+        let msg = "bonjour";
+        console.log(msg);
+        console.log(typeof msg);
+
+        let myString = new String("au revoir");
+
+        console.dir(myString);
+        console.log(typeof myString);
+
+        console.log(myString.indexOf("e"));
+        console.log("hello".indexOf("e"));
+        console.log(["h", "e", "l", "l", "o"].indexOf("e"));
+
+        console.dir(new Number());
+
+        console.log(Number);
+
+        let number = new Number("6");
+        console.log(parseFloat(number));
+    </script>
+
+    <!-- SLICE -->
+    <script>
+        let fruits = ["banane", "citron", "fraise"];
+        let legumes_fruits = fruits.slice(); // Pour dupliquer le tableau;
+        legumes_fruits.push("tomate");
+
+        console.log(fruits, legumes_fruits)
+    </script>
+</body>
+
+</html>

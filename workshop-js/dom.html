@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .animation {
+            animation: bouge 1s linear;
+        };
+
+        @keyframes bouge {
+            from {
+                background-color: blue;
+                color: red;
+            }
+
+            to {
+                background-color: red;
+                color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="animation">Hello World</h1>
+    <button id="changeColor">Change color</button>
+    <script>
+        let msg = document.querySelector("h1");
+        let button = document.getElementById("changeColor");
+
+        let displayMessage = function () {
+            msg.style.background = "blue";
+            msg.style.color = "white";
+        }
+
+        // addEventListener permet d'écouter la même action avec plusieurs paramettres differents.
+        msg.addEventListener("click", function () {
+            displayMessage();
+        })
+
+        let isAnimating = false;
+        let secondes = 2;
+
+        button.addEventListener("click", function (event) {
+            // console.dir(event.target.style)
+            // if (!isAnimating) {
+            //     isAnimating = true;
+            //     msg.style.animation = "bouge " + secondes + "s linear";
+            // } else {
+            //     isAnimating = false;
+            //     msg.style.animation = "";
+            // }
+
+            msg.classList.toggle("animation");
+        })
+
+
+        console.log(msg);
+        console.dir(msg); // pour voir toutes les propriétés possibles.
+
+    </script>
+</body>
+
+</html>

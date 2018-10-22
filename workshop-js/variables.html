@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function init() {
+            var variable_var = "bonjour everybody"; // portée globale
+            let variable_let = "Hello world"; // portée ciblé
+            const variable_const = "Hola mundo"; // porté unique
+            console.log(variable_let);
+        }
+
+        init();
+
+        let fruits = ["bananes", "pommes", "cerises"];
+        for (var i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        console.log(fruits[i - 1]);
+    </script>
+</body>
+
+</html>
